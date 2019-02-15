@@ -7,7 +7,7 @@ build:
     docker: {}
   tagPolicy:
     envTemplate:
-      template: '{{.DOCKER_REGISTRY}}/zmailloux/meta-project:{{.VERSION}}'
+      template: 'gcr.io/es-devops-d/mygroup/meta-project:{{.VERSION}}'
   local: {}
 deploy:
   kubectl: {}
@@ -18,7 +18,7 @@ profiles:
     - docker: {}
     tagPolicy:
       envTemplate:
-        template: '{{.DOCKER_REGISTRY}}/zmailloux/meta-project:{{.DIGEST_HEX}}'
+        template: 'gcr.io/es-devops-d/mygroup/meta-project:{{.DIGEST_HEX}}'
     local: {}
   deploy:
     helm:
@@ -26,5 +26,5 @@ profiles:
       - name: meta-project
         chartPath: charts/meta-project
         setValueTemplates:
-          image.repository: '{{.DOCKER_REGISTRY}}/zmailloux/meta-project'
+          image.repository: 'gcr.io/es-devops-d/mygroup/meta-project'
           image.tag: '{{.DIGEST_HEX}}'

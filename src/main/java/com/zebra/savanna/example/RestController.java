@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class RestController {
 
-	private static final String template = "welcome to innersource, %s!";
+	private static final String template = "welcome to innersource yo, %s!";
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/test")

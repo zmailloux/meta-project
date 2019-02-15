@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: gcr.io/es-devops-d/mygroup/meta-project
-  tag: stable
+  repository: 10.19.250.213:5000/zebra/meta-project
+  tag: 0.0.4
   pullPolicy: IfNotPresent
 
 # service:

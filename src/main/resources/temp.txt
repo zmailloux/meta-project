@@ -1,0 +1,19 @@
+endpoints:
+  prometheus:
+    enabled: true
+  metrics:
+    enabled: true
+  web:
+    exposure:
+      include: *
+
+management:
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true

@@ -7,7 +7,7 @@ build:
     docker: {}
   tagPolicy:
     envTemplate:
-      template: '{{.DOCKER_REGISTRY}}/zebra/spring-boot-http-gradle:{{.VERSION}}'
+      template: '{{.DOCKER_REGISTRY}}/zmailloux/meta-project:{{.VERSION}}'
   local: {}
 deploy:
   kubectl: {}
@@ -18,13 +18,13 @@ profiles:
     - docker: {}
     tagPolicy:
       envTemplate:
-        template: '{{.DOCKER_REGISTRY}}/zebra/spring-boot-http-gradle:{{.DIGEST_HEX}}'
+        template: '{{.DOCKER_REGISTRY}}/zmailloux/meta-project:{{.DIGEST_HEX}}'
     local: {}
   deploy:
     helm:
       releases:
-      - name: spring-boot-http-gradle
-        chartPath: charts/spring-boot-http-gradle
+      - name: meta-project
+        chartPath: charts/meta-project
         setValueTemplates:
-          image.repository: '{{.DOCKER_REGISTRY}}/zebra/spring-boot-http-gradle'
+          image.repository: '{{.DOCKER_REGISTRY}}/zmailloux/meta-project'
           image.tag: '{{.DIGEST_HEX}}'

@@ -1,6 +1,6 @@
 CHART_REPO := http://jenkins-x-chartmuseum:8080
 CURRENT=$(pwd)
-NAME := meta-project
+NAME := spring-boot-http-gradle
 OS := $(shell uname)
 RELEASE_VERSION := $(shell cat ../../VERSION)
 

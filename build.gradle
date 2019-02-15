@@ -45,14 +45,14 @@ bootJar {
 	mainClassName = 'com.zebra.savanna.example.ExampleApplication'
 }
 
-docker {
-	name "${project.group}/${jar.archiveBaseName.get()}"
-	// use the absolute path of the jar to add it to Docker's build context
-	files jar.archiveFile.get().asFile.absolutePath
-	// provide the name of the jar (that has already been added to the build context) as a build argument so the jar
-	// can be copied into the container
-	buildArgs(['JAR_FILE': "${jar.getArchiveFileName().get()}"])
-}
+//docker {
+//	name "${project.group}/${jar.archiveBaseName.get()}"
+//	// use the absolute path of the jar to add it to Docker's build context
+//	files jar.archiveFile.get().asFile.absolutePath
+//	// provide the name of the jar (that has already been added to the build context) as a build argument so the jar
+//	// can be copied into the container
+//	buildArgs(['JAR_FILE': "${jar.getArchiveFileName().get()}"])
+//}
 
 jacoco {
 	toolVersion = "0.8.2"

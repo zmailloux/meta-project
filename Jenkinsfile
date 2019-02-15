@@ -4,7 +4,7 @@ pipeline {
   }
   environment {
     ORG = 'zebra'
-    APP_NAME = 'spring-boot-http-gradle'
+    APP_NAME = 'meta-project'
     CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
   }
   stages {
@@ -56,7 +56,7 @@ pipeline {
       }
       steps {
         container('gradle') {
-          dir('./charts/spring-boot-http-gradle') {
+          dir('./charts/meta-project') {
             sh "jx step changelog --version v\$(cat ../../VERSION)"
 
             // release the helm chart

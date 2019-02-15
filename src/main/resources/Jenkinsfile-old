@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Gradle build') {
+            sh "./gradlew build docker"
+        }
+        stage('Stage 2') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Stage 3') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}

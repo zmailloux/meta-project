@@ -3,7 +3,7 @@ pipeline {
     label "jenkins-gradle"
   }
   environment {
-    ORG = 'zebra'
+    ORG = 'zmailloux'
     APP_NAME = 'meta-project'
     CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
   }

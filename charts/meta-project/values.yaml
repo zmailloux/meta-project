@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
-  repository: draft
-  tag: dev
+  repository: 10.47.243.161:5000/zmailloux/meta-project
+  tag: 0.0.18
   pullPolicy: IfNotPresent
 service:
   name: meta-project

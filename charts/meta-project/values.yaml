@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: gcr.io/es-devops-d/zebra/meta-project
-  tag: latest
+  repository: 10.43.253.213:5000/zebra/meta-project
+  tag: 0.0.19
   pullPolicy: IfNotPresent
 
 ingress:

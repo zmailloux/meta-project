@@ -3,6 +3,7 @@ pipeline {
     label "jenkins-gradle"
   }
   environment {
+    DOCKER_REGISTRY = "gcr.io/es-devops-d"
     ORG = 'zebra'
     APP_NAME = 'meta-project'
     CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')

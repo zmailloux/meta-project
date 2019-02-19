@@ -16,7 +16,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - meta-project.dev.zebra.engineering
+    - meta-project.zach.zebra.engineering
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

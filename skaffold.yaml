@@ -28,4 +28,3 @@ profiles:
         setValueTemplates:
           image.repository: '{{.DOCKER_REGISTRY}}/es-devops-d/meta-project'
           image.tag: '{{.DIGEST_HEX}}'
-          ingress.host: "{{.DIGEST_HEX}}.zach.zebra.engineering"

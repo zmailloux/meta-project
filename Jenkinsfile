@@ -49,6 +49,8 @@ pipeline {
           sh "gradle clean build"
           sh "export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml"
           sh "jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:\$(cat VERSION)"
+          // Also deloy it again as latest.
+          sh "jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:latest"
         }
       }
     }

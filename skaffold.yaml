@@ -7,7 +7,7 @@ build:
     docker: {}
   tagPolicy:
     envTemplate:
-      template: '{{.DOCKER_REGISTRY}}/zebra/meta-project:{{.VERSION}}'
+      template: '{{.DOCKER_REGISTRY}}/es-devops-d/meta-project:{{.VERSION}}'
   local: {}
 deploy:
   kubectl: {}
@@ -18,7 +18,7 @@ profiles:
     - docker: {}
     tagPolicy:
       envTemplate:
-        template: '{{.DOCKER_REGISTRY}}/zebra/meta-project:{{.DIGEST_HEX}}'
+        template: '{{.DOCKER_REGISTRY}}/es-devops-d/meta-project:{{.DIGEST_HEX}}'
     local: {}
   deploy:
     helm:
@@ -26,5 +26,5 @@ profiles:
       - name: meta-project
         chartPath: charts/meta-project
         setValueTemplates:
-          image.repository: '{{.DOCKER_REGISTRY}}/zebra/meta-project'
+          image.repository: '{{.DOCKER_REGISTRY}}/es-devops-d/meta-project'
           image.tag: '{{.DIGEST_HEX}}'

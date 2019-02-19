@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: gcr.io/es-devops-d/zebra/meta-project
+  repository: gcr.io/es-devops-d/meta-project
   tag: latest
   pullPolicy: IfNotPresent
 

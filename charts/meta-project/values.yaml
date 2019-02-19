@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: gcr.io/es-devops-d/zebra/meta-project
+  repository: gcr.io/es-devops-d/meta-project
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -16,7 +16,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - meta-project.dev.zebra.engineering
+    - meta-project.zach.zebra.engineering
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

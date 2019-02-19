@@ -15,7 +15,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   path: /
-  host: meta-project.zach.zebra.engineering
+#  host: meta-project.zach.zebra.engineering
 #  hosts:
 #    - meta-project.zach.zebra.engineering
   tls: []

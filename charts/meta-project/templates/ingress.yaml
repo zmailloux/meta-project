@@ -25,7 +25,6 @@ spec:
   {{- end }}
 {{- end }}
   rules:
-#  {{- range .Values.ingress.hosts }}
     - host: {{ .Values.ingress.host }}
       http:
         paths:
@@ -37,5 +36,4 @@ spec:
             backend:
               serviceName: {{ $fullName }}
               servicePort: 9001
-#  {{- end }}
 {{- end }}

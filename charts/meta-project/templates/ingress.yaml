@@ -29,11 +29,11 @@ spec:
     - host: {{ $fullName }}.{{ . }}
       http:
         paths:
-          - path: /external
+          - path: /external/?(.*)
             backend:
               serviceName: {{ $fullName }}
               servicePort: 9001
-          - path: /
+          - path: /?(.*)
             backend:
               serviceName: {{ $fullName }}
               servicePort: 9000

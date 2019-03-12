@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: gcr.io/es-devops-d/meta-project
-  tag: latest
+  tag: 0.0.35
   pullPolicy: IfNotPresent
 
 ingress:
